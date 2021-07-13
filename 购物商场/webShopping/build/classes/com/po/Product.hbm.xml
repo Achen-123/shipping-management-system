@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-29 15:14:59 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.po.Product" table="product">
+    
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" /> <!-- 表中的字段名 -->
+           <!--  <generator class="increment" /> 主键 ：自增 -->
+            <generator class="native"></generator>
+        </id>
+        
+        <property name="name" type="java.lang.String">
+            <column name="name" /><!-- 表中的字段名 -->
+        </property>
+        <property name="sort" type="java.lang.Integer">
+            <column name="sort" /><!-- 表中的字段名 -->
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="price" /><!-- 表中的字段名 -->
+        </property>
+          <property name="oneprice" type="java.lang.Float">
+            <column name="oneprice" /><!-- 表中的字段名 -->
+        </property>
+        <property name="img" type="java.lang.String">
+            <column name="img" /><!-- 表中的字段名 -->
+        </property>
+		<property name="date" type="java.lang.String">
+            <column name="date" /><!-- 表中的字段名 -->
+        </property>
+        <property name="sale" type="java.lang.Integer">
+            <column name="sale" /><!-- 表中的字段名 -->
+        </property>
+        <property name="face" type="java.lang.String">
+            <column name="face" /><!-- 表中的字段名 -->
+        </property>
+          <property name="body" type="java.lang.String">
+            <column name="body" /><!-- 表中的字段名 -->
+        </property>
+        <property name="length" type="java.lang.Float">
+            <column name="length" /><!-- 表中的字段名 -->
+        </property>
+        <property name="quantity" type="java.lang.Integer">
+            <column name="quantity" /><!-- 表中的字段名 -->
+        </property>
+        <property name="source" type="java.lang.String">
+            <column name="source" /><!-- 表中的字段名 -->
+        </property>
+
+    </class>
+</hibernate-mapping>

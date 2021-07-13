@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-29 15:14:59 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.po.Userinfo" table="userinfo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" /> <!-- 表中的字段名 -->
+           <!--  <generator class="increment" /> 主键 ：自增 -->
+            <generator class="native"></generator>
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" /><!-- 表中的字段名 -->
+        </property>
+        <property name="pwd" type="java.lang.String">
+            <column name="PASSWORD" /><!-- 表中的字段名 -->
+        </property>
+          <property name="sex" type="java.lang.String">
+            <column name="SEX" /><!-- 表中的字段名 -->
+        </property>
+        <property name="hobby" type="java.lang.String">
+            <column name="INTEREST" /><!-- 表中的字段名 -->
+        </property>
+
+    </class>
+</hibernate-mapping>

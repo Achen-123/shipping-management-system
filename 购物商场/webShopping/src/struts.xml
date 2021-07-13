@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="*Action" class="com.action.UserAction" method="{1}">
+			<result name="regError">/reg.jsp</result>
+			<result name="regSuccess">/regShow.jsp</result>
+			<result name="loginError">/login.jsp</result>
+			<result name="loginSuccess">/index.jsp</result>
+			<result name="logoutSuccess">/index.jsp</result>
+		</action>
+		
+		<!--商品-->
+		<action name="showProductAction" class="com.action.ProductAction" method="showProduct">
+			<result name="showProductSuccess">/product.jsp</result>
+		</action>
+		<action name="showProductBySortAction" class="com.action.ProductAction" method="showProductBySort">
+			<result name="showProductSuccess">/product.jsp</result>
+		</action>
+		<action name="showProductDetailAction" class="com.action.ProductAction" method="showProductDetail">
+			<result name="showProductDetailSuccess">/item.jsp</result>
+		</action>
+		<!--购物车-->
+		<action name="showCartAction" class="com.action.CartAction" method="showCartByUsername">
+			<result name="showCartSuccess">/cart_view.jsp</result>
+			<result name="loginError">/login.jsp</result>
+		</action>
+		<action name="deleteCartAction" class="com.action.CartAction" method="deleteProductOfCart">
+			<result name="updateProductSuccess" type="redirect">showCartAction</result>
+		</action>
+		<action name="clearCartAction" class="com.action.CartAction" method="clearCart">
+			<result name="updateProductSuccess" type="redirect">showCartAction</result>
+		</action>
+		<action name="addToCartAction" class="com.action.CartAction" method="addToCart">
+			<result name="loginError">/login.jsp</result>
+			<result name="addCartSuccess" type="redirect">showProductAction</result>
+		</action>
+		<action name="payAction" class="com.action.CartAction" method="pay">
+			<result name="paySuccess" type="redirect">/pay.jsp</result>
+		</action>
+    </package>
+</struts>

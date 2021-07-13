@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-10-29 15:14:59 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.po.Cart" table="cart">
+        <id name="cartid" type="java.lang.Integer">
+            <column name="cartid" /> <!-- 表中的字段名 -->
+           <!--  <generator class="increment" /> 主键 ：自增 -->
+            <generator class="native"></generator>
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" /><!-- 表中的字段名 -->
+        </property>
+        <property name="productid" type="java.lang.Integer">
+            <column name="productid" /><!-- 表中的字段名 -->
+        </property>
+          <property name="count" type="java.lang.Integer">
+            <column name="count" /><!-- 表中的字段名 -->
+        </property>
+    </class>
+</hibernate-mapping>
